@@ -30,7 +30,7 @@ export const FEATURE_ICONS: Record<string, JSX.Element> = {
       <path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H9l-5 4V6z" />
     </svg>
   ),
-  "Follow & favorite": (
+  "Follow & Favorite": (
     <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
       <path d="M12 21l-1.5-1.35C5.5 15.5 2 12.4 2 8.5 2 5.8 4.2 4 6.8 4c1.5 0 2.9.7 3.8 1.8C11.5 4.7 12.9 4 14.4 4 17 4 19.2 5.8 19.2 8.5c0 3.9-3.5 7-8.5 11.15L12 21z" />
     </svg>
@@ -41,12 +41,12 @@ export const FEATURE_ICONS: Record<string, JSX.Element> = {
       <circle cx="12" cy="12" r="9" />
     </svg>
   ),
-  "Recenzii pacienți": (
+  "Recenzii de la pacienți": (
     <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
       <path d="M12 2l2.4 4.8 5.3.8-3.8 3.7 1 5.3L12 14.8 7.1 16.6l1-5.3L4.3 7.6l5.3-.8L12 2z" />
     </svg>
   ),
-  "Cont verificat": (
+  "Profiluri verificate": (
     <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
       <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />
       <path d="M12 3l7 3v6c0 4.5-3 8.5-7 9-4-.5-7-4.5-7-9V6l7-3z" />

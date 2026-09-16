@@ -100,53 +100,63 @@ export const AUDIENCES = [
 export const FEATURES = [
   {
     title: "Feed profesional",
+    subtitle: "Un spațiu pentru activitatea și poveștile din lumea dentară.",
     body:
-      "Tab Acasă: postări foto/video, reacții, comentarii și salvări — ca un jurnal al activității clinicii sau laboratorului.",
+      "Descoperă postări foto și video, reacții, comentarii și conținut publicat de clinici și laboratoare. Prezintă proiecte, rezultate și activitatea echipei într-un spațiu construit pentru comunitatea dentară.",
   },
   {
     title: "Descoperă & Dental Map",
+    subtitle: "Găsește profesioniștii și serviciile potrivite.",
     body:
-      "Căutare globală cu filtre (oraș, specializare, verificat, colaborare) plus hartă live cu clinici, medici și laboratoare.",
+      "Explorează clinici, medici și laboratoare prin căutare sau direct pe hartă. Folosește filtre precum orașul, specializarea, verificarea profilului sau disponibilitatea pentru colaborare pentru a ajunge mai rapid la conexiunile relevante.",
   },
   {
     title: "Colaborări B2B",
+    subtitle: "Oportunități reale pentru parteneriate profesionale.",
     body:
-      "Tab Colaborări: Opportunities structurate clinică ↔ laborator; interes → accept → chat. Mai mulți parteneri pot fi acceptați.",
+      "Clinicile și laboratoarele pot publica și descoperi oportunități de colaborare, își pot exprima interesul și pot continua discuția direct prin mesagerie. Un singur proiect poate conecta mai mulți parteneri atunci când colaborarea o cere.",
   },
   {
     title: "Mesagerie privată",
+    subtitle: "Comunicare directă între oamenii potriviți.",
     body:
-      "Text, foto și fișiere între pacient și clinică sau între clinică și laborator — fără numere pierdute la recepție.",
+      "Discută în privat cu clinici, laboratoare sau pacienți și trimite mesaje, fotografii și fișiere într-un singur loc. Fără canale separate și fără informații importante pierdute între conversații.",
   },
   {
-    title: "Follow & favorite",
+    title: "Follow & Favorite",
+    subtitle: "Păstrează aproape profilurile care contează.",
     body:
-      "Urmărești profiluri relevante; listele de followers/following sunt publice, inclusiv pentru pacienți.",
+      "Urmărește clinici, laboratoare și alte profiluri relevante pentru a rămâne conectat la activitatea lor. Salvează ceea ce vrei să regăsești mai târziu și construiește-ți propriul spațiu de conexiuni.",
   },
   {
     title: "Open for Collaboration",
+    subtitle: "Fă cunoscut faptul că ești deschis către noi oportunități.",
     body:
-      "Badge și mesaj pe profilul clinică/laborator când ești deschis la parteneriate noi — filtrabil în Descoperă.",
+      "Clinicile și laboratoarele își pot afișa disponibilitatea pentru colaborări direct pe profil. Astfel, partenerii interesați pot identifica mai ușor organizațiile deschise către noi proiecte și conexiuni profesionale.",
   },
   {
-    title: "Recenzii pacienți",
+    title: "Recenzii de la pacienți",
+    subtitle: "Experiențele pacienților construiesc încredere.",
     body:
-      "Rating 1–5 stele către clinici; la ștergere cont, recenziile sunt eliminate complet și ratingul se recalculează.",
+      "Pacienții pot evalua clinicile prin ratinguri și recenzii de la 1 la 5 stele. Feedbackul oferă viitorilor pacienți o perspectivă asupra experiențelor altora și contribuie la o prezență online mai transparentă.",
   },
   {
-    title: "Cont verificat",
+    title: "Profiluri verificate",
+    subtitle: "Mai multă transparență. Mai multă încredere.",
     body:
-      "Clinică: CUI, autorizație DSP, CI reprezentant. Lab: CUI, certificat tehnician, CI. Documentele rămân doar la admin.",
+      "Clinicile și laboratoarele pot trece printr-un proces de verificare bazat pe documente oficiale. După validare, profilul primește badge-ul Verificat, iar documentele transmise rămân accesibile exclusiv administratorilor autorizați.",
   },
   {
     title: "Prezență & notificări",
+    subtitle: "Rămâi conectat la conversațiile și oportunitățile importante.",
     body:
-      "Status online global în app; notificări in-app pentru mesaje, recenzii și colaborări (+ push la lansare publică).",
+      "Vezi disponibilitatea online a utilizatorilor și primește notificări pentru mesaje, recenzii și colaborări. Astfel, interacțiunile importante rămân aproape, chiar și atunci când nu ești activ în aplicație.",
   },
   {
     title: "Siguranță & GDPR",
+    subtitle: "Un spațiu digital construit cu respect pentru datele tale.",
     body:
-      "Block ascunde complet din feed, search și hartă. Raportare cu moderare umană. Export date și ștergere hard din setări.",
+      "Funcțiile de blocare și raportare oferă control asupra interacțiunilor, iar conținutul raportat poate fi analizat prin moderare. Utilizatorii își pot solicita datele și își pot șterge definitiv contul din setări, conform politicilor de protecție a datelor.",
   },
 ];
 
@@ -185,7 +195,7 @@ export const FAQ = [
   },
   {
     q: "Cum funcționează resetarea parolei?",
-    a: "Primești email de la DentVeerse (dentveerse@gmail.com), linkul deschide dentveerse.com/auth/reset-password, setezi parola nouă, apoi revii în app la sign-in (deep link dentalconnect://).",
+    a: "Primești email de la DentVeerse (dentveerse@gmail.com), linkul deschide dentveerse.com/auth/reset-password, setezi parola nouă, apoi revii în aplicația DentVeerse.",
   },
   {
     q: "Pot schimba tipul de cont (pacient → clinică)?",

@@ -14,7 +14,7 @@ export default function AppExperience() {
       <div className="container-page">
         <SectionHeader
           kicker="În aplicație"
-          title={`${SITE.productName} — cinci tab-uri, un singur ecosistem.`}
+          title={`${SITE.name} — cinci tab-uri, un singur ecosistem.`}
           description="Conturile se creează în app (iOS & Android). Site-ul le explică; experiența completă trăiește pe telefon."
         />
 
@@ -54,16 +54,14 @@ export default function AppExperience() {
                 <p className="text-kicker text-primary-light">{tab.label}</p>
                 <p className="mt-3 text-[17px] leading-relaxed text-ink-soft">{tab.body}</p>
                 <p className="mt-6 text-[13px] text-ink-muted">
-                  Deep link:{" "}
-                  <code className="rounded-md bg-black/25 px-2 py-0.5 text-primary-light">
-                    {SITE.appDeepLink}
-                  </code>
+                  Disponibil în aplicația <span className="text-ink-soft">{SITE.name}</span> pentru
+                  iOS și Android.
                 </p>
               </div>
               <div className="relative flex min-h-[200px] items-center justify-center rounded-2xl border border-white/10 bg-black/20 p-6">
                 <div className="absolute inset-x-8 top-6 flex justify-between text-[10px] font-medium uppercase tracking-widest text-ink-muted">
                   <span>9:41</span>
-                  <span>{SITE.productName}</span>
+                  <span>{SITE.name}</span>
                 </div>
                 <div className="mt-8 w-full max-w-[280px] space-y-3">
                   <div className="h-3 w-3/4 rounded-full bg-white/15" />

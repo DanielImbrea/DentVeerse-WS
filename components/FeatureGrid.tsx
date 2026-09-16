@@ -11,9 +11,10 @@ export default function FeatureGrid() {
     <section id="functii" className="py-20 md:py-28">
       <div className="container-page">
         <SectionHeader
+          className="max-w-[68ch]"
           kicker="Funcționalități"
-          title="Descoperire, marketing și networking — într-un singur flux."
-          description="Tot ce e în MVP-ul aplicației — descoperire, feed, hartă, colaborări, mesaje, verificare. Fără CRM, facturare sau EHR."
+          title="O nouă perspectivă asupra colaborării în stomatologie."
+          description="Clinici, laboratoare, medici și pacienți — conectați printr-o experiență digitală simplă și intuitivă."
         />
 
         <motion.div
@@ -40,7 +41,10 @@ export default function FeatureGrid() {
                 </span>
               </div>
               <h3 className="mt-5 text-[17px] font-semibold tracking-tight text-ink">{f.title}</h3>
-              <p className="mt-2.5 text-[14.5px] leading-relaxed text-ink-soft">{f.body}</p>
+              {"subtitle" in f && f.subtitle && (
+                <p className="mt-2 text-[14px] font-medium leading-snug text-ink">{f.subtitle}</p>
+              )}
+              <p className="mt-2.5 text-[14px] leading-[1.65] text-ink-soft">{f.body}</p>
             </motion.article>
           ))}
         </motion.div>
