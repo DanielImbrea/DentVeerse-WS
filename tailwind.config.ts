@@ -9,6 +9,7 @@ const config: Config = {
         "primary-dark": "#0A4A47",
         "primary-light": "#5EC4BC",
         accent: "#C98A3B",
+        "accent-light": "#E8C978",
         bg: "#052C24",
         surface: "rgba(255,255,255,0.06)",
         border: "rgba(255,255,255,0.12)",

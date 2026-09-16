@@ -36,7 +36,7 @@ export default function FeatureGrid() {
               />
               <div className="flex items-start justify-between gap-4">
                 <FeatureIcon title={f.title} />
-                <span className="font-display text-[12px] font-semibold text-accent/80">
+                <span className="font-display text-[12px] font-semibold tracking-wide text-accent-light">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>

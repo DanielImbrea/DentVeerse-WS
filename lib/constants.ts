@@ -187,43 +187,43 @@ export const HOW_IT_WORKS: Record<
 export const FAQ = [
   {
     q: "DentVeerse este gratuit?",
-    a: "La lansare, da — estimăm ~6–12 luni gratuite pentru toți tipurile de cont, fără abonament PRO promovat acum. Limite tehnice anti-spam (ex. ~25 media per item portofoliu, max ~5 Opportunities active) se aplică pentru calitatea platformei.",
+    a: "Da. La lansare, DentVeerse va fi gratuit pentru toate tipurile de cont. În această etapă nu este disponibil un abonament PRO. Pentru a menține platforma sigură și echilibrată, anumite funcții pot avea limite tehnice privind volumul de conținut sau activitățile realizate.",
   },
   {
-    q: "Pot crea contul pe site?",
-    a: "Conturile se creează și se folosesc în aplicația mobilă (iOS/Android). Site-ul servește prezentare, pagini legale și legătura auth din email (confirmare, reset parolă).",
+    q: "Pot crea un cont direct pe site?",
+    a: "Conturile DentVeerse sunt create și utilizate în aplicația mobilă, disponibilă pentru iOS și Android. Site-ul este dedicat prezentării platformei, informațiilor despre DentVeerse, documentației legale și proceselor de autentificare asociate contului.",
   },
   {
-    q: "Cum funcționează resetarea parolei?",
-    a: "Primești email de la DentVeerse (dentveerse@gmail.com), linkul deschide dentveerse.com/auth/reset-password, setezi parola nouă, apoi revii în aplicația DentVeerse.",
+    q: "Cum îmi resetez parola?",
+    a: "Dacă ai uitat parola, solicită resetarea acesteia din aplicație. Vei primi un email de la DentVeerse cu un link securizat, prin care îți poți seta o parolă nouă. După finalizare, te poți autentifica din nou în aplicație.",
   },
   {
-    q: "Pot schimba tipul de cont (pacient → clinică)?",
-    a: "Nu. Tipul de cont (pacient / clinică / laborator) se alege la onboarding și este imutabil — alege corect de la început.",
+    q: "Pot schimba tipul de cont după înregistrare?",
+    a: "Tipul de cont — pacient, clinică sau laborator — este stabilit în momentul înregistrării și nu poate fi modificat ulterior. Alegerea este importantă deoarece determină experiența și funcțiile disponibile în platformă.",
   },
   {
-    q: "Cum funcționează verificarea?",
-    a: "Clinică: CUI, autorizație DSP, CI reprezentant. Laborator: CUI, certificat tehnician responsabil, CI reprezentant. Documentele sunt văzute doar de admin; public apare doar badge-ul Verificat.",
+    q: "Cum funcționează verificarea profilurilor?",
+    a: "Verificarea este disponibilă pentru clinici și laboratoare și presupune verificarea unor documente relevante. Pentru clinici sunt solicitate, printre altele, CUI-ul, autorizația DSP și actul de identitate al reprezentantului. Pentru laboratoare, procesul include CUI-ul, certificatul tehnicianului responsabil și actul de identitate al reprezentantului. Documentele sunt accesibile doar administratorilor autorizați. În profilul public este afișat doar badge-ul Verificat.",
   },
   {
-    q: "Ce NU face platforma?",
-    a: "Nu gestionăm comenzi lab, tracking lucrări, CRM clinică, facturare, contabilitate sau dosare medicale / EHR. Suntem stratul de discovery, marketing și networking profesional.",
+    q: "Pentru ce este construit DentVeerse?",
+    a: "DentVeerse este construit pentru descoperire, prezență digitală, comunicare și colaborare în ecosistemul dentar. Nu înlocuiește sistemele de management ale clinicilor sau laboratoarelor și nu gestionează comenzi de laborator, facturare, contabilitate sau dosare medicale.",
   },
   {
-    q: "Followers sunt privați?",
-    a: "Nu. Listele de followers și following sunt publice, inclusiv când pacienții urmăresc o clinică.",
+    q: "Listele de followers și following sunt private?",
+    a: "Nu. Listele de followers și following sunt publice. Acest lucru permite utilizatorilor să descopere mai ușor profesioniști, clinici și alte profiluri relevante din comunitatea DentVeerse.",
   },
   {
-    q: "Ce se întâmplă când blochez pe cineva?",
-    a: "Persoana dispare complet din feed, căutare și hartă — nu doar din chat.",
+    q: "Ce se întâmplă când blochez un utilizator?",
+    a: "Blocarea elimină interacțiunea dintre cele două conturi. Utilizatorul blocat nu va mai apărea în feed, rezultatele căutării sau pe hartă și nu va mai putea interacționa cu tine prin platformă.",
   },
   {
-    q: "Datele mele și GDPR?",
-    a: "Export din setările app; ștergerea contului elimină datele personale (hard delete). Recenziile tale sunt șterse complet, cu recalcul rating. Politica completă: /confidentialitate.",
+    q: "Cum sunt protejate datele mele?",
+    a: "DentVeerse acordă o atenție deosebită protecției datelor și drepturilor utilizatorilor. Din aplicație poți solicita exportul datelor tale, iar ștergerea contului elimină datele personale conform politicii platformei. Recenziile asociate contului sunt, de asemenea, eliminate, iar ratingurile sunt recalculate. Pentru detalii despre prelucrarea datelor și drepturile tale, consultă Politica de confidențialitate (/confidentialitate).",
   },
   {
-    q: "Când e pe App Store și Google Play?",
-    a: "Aplicația este în beta. Intră pe lista de așteptare — te anunțăm când store-urile sunt live în regiunea ta.",
+    q: "Când va fi disponibilă aplicația pe App Store și Google Play?",
+    a: "DentVeerse se află în etapa beta. Disponibilitatea pe App Store și Google Play va fi anunțată pe măsură ce aplicația devine disponibilă în regiunea ta. Te poți înscrie pe lista de așteptare pentru a primi noutăți despre lansare.",
   },
 ];
 
