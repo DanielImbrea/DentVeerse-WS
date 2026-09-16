@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 import { revealUp } from "@/lib/animations";
 import { SITE } from "@/lib/constants";
 
-const FORM_ENDPOINT = "";
-
 type Role = "pacient" | "clinica" | "laborator";
 
 export default function Waitlist() {
@@ -18,22 +16,20 @@ export default function Waitlist() {
     e.preventDefault();
     if (!email.includes("@")) return;
 
-    if (!FORM_ENDPOINT) {
-      window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(
-        "Lista de așteptare DentVeerse"
-      )}&body=${encodeURIComponent(`Email: ${email}\nMă înscriu ca: ${role}`)}`;
-      setStatus("success");
-      return;
-    }
-
     try {
       setStatus("loading");
-      const res = await fetch(FORM_ENDPOINT, {
+      const res = await fetch("/api/waitlist", {
         method: "POST",
-        headers: { Accept: "application/json", "Content-Type": "application/json" },
-        body: JSON.stringify({ email, role }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, role, company: "" }),
       });
-      setStatus(res.ok ? "success" : "error");
+
+      if (res.ok) {
+        setStatus("success");
+        return;
+      }
+
+      setStatus("error");
     } catch {
       setStatus("error");
     }
@@ -65,7 +61,7 @@ export default function Waitlist() {
                 Fii primul care află când lansăm pe App Store și Google Play.
               </h2>
               <p className="mt-5 max-w-prose text-[16px] leading-relaxed text-ink-soft">
-                Un singur email, exact când aplicația devine disponibilă în regiunea ta. Fără spam.
+                Un singur click — te contactăm când aplicația e disponibilă. Fără spam.
               </p>
             </div>
 
@@ -79,6 +75,15 @@ export default function Waitlist() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
+                  <input
+                    type="text"
+                    name="company"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    className="pointer-events-none absolute h-0 w-0 opacity-0"
+                    aria-hidden
+                  />
+
                   <div>
                     <label htmlFor="email" className="mb-2 block text-[13px] font-semibold text-ink">
                       Adresă de email
@@ -126,8 +131,8 @@ export default function Waitlist() {
                   </button>
 
                   {status === "error" && (
-                    <p className="text-[13.5px] text-red-700">
-                      Ceva nu a mers bine. Încearcă din nou sau scrie-ne la {SITE.email}.
+                    <p className="text-[13.5px] text-red-300">
+                      Nu am putut înregistra emailul. Încearcă din nou sau scrie-ne la {SITE.email}.
                     </p>
                   )}
                 </form>

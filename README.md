@@ -18,7 +18,11 @@ npm run build
 npm run start
 ```
 
-Copiază `.env.example` în `.env.local` și completează variabilele Supabase pentru paginile `/auth/*`.
+Copiază `.env.example` în `.env.local`.
+
+**Lista de așteptare:** setează `FORMSPREE_FORM_ID` (formspree.io → formular către dentveerse@gmail.com) **sau** `SMTP_USER` + `SMTP_PASS` (parolă de aplicație Gmail). Fără una dintre variante, submit-ul returnează eroare.
+
+Opțional Supabase pentru paginile `/auth/*`.
 
 ## Deploy
 
