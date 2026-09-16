@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FAQ as FAQ_ITEMS } from "@/lib/constants";
+import { FAQ as FAQ_ITEMS, SITE } from "@/lib/constants";
 import SectionHeader from "./SectionHeader";
 
 function FaqItem({
@@ -77,10 +77,10 @@ export default function FAQ() {
               <>
                 Nu găsești răspunsul? Scrie-ne la{" "}
                 <a
-                  href="mailto:contact@dentveerse.com"
+                  href={`mailto:${SITE.email}`}
                   className="focus-ring font-semibold text-primary-light underline decoration-primary-light/30 underline-offset-4"
                 >
-                  contact@dentveerse.com
+                  {SITE.email}
                 </a>
                 .
               </>

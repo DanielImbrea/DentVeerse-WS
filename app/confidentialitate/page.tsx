@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LegalLayout from "@/components/LegalLayout";
+import { SITE } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Confidențialitate",
@@ -45,8 +46,8 @@ export default function ConfidentialitatePage() {
         Ai dreptul de a accesa, corecta sau solicita ștergerea datelor tale.
         Funcția de export al datelor din cont este în pregătire (roadmap).
         Pentru orice solicitare, ne poți scrie la{" "}
-        <a href="mailto:contact@dentveerse.com" className="text-primary-light underline underline-offset-4">
-          contact@dentveerse.com
+        <a href={`mailto:${SITE.email}`} className="text-primary-light underline underline-offset-4">
+          {SITE.email}
         </a>
         .
       </p>

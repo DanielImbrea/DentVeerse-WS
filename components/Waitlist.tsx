@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import { revealUp } from "@/lib/animations";
+import { SITE } from "@/lib/constants";
 
 const FORM_ENDPOINT = "";
 
@@ -18,7 +19,7 @@ export default function Waitlist() {
     if (!email.includes("@")) return;
 
     if (!FORM_ENDPOINT) {
-      window.location.href = `mailto:contact@dentveerse.com?subject=${encodeURIComponent(
+      window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(
         "Lista de așteptare DentVeerse"
       )}&body=${encodeURIComponent(`Email: ${email}\nMă înscriu ca: ${role}`)}`;
       setStatus("success");
@@ -126,7 +127,7 @@ export default function Waitlist() {
 
                   {status === "error" && (
                     <p className="text-[13.5px] text-red-700">
-                      Ceva nu a mers bine. Încearcă din nou sau scrie-ne la contact@dentveerse.com.
+                      Ceva nu a mers bine. Încearcă din nou sau scrie-ne la {SITE.email}.
                     </p>
                   )}
                 </form>

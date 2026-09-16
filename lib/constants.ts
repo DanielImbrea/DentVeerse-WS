@@ -7,8 +7,7 @@ export const SITE = {
   positioning:
     "LinkedIn + Instagram + Maps pentru stomatologie: discovery, portofoliu, feed, networking și colaborări B2B — nu CRM, facturare sau dosare medicale.",
   domain: "https://www.dentveerse.com",
-  email: "contact@dentveerse.com",
-  noreplyEmail: "noreply@dentveerse.com",
+  email: "dentveerse@gmail.com",
   descriptionShort:
     "Ecosistemul profesional care leagă pacienți, clinici și laboratoare dentare — descoperire, verificare, mesagerie și colaborări B2B, direct din aplicație.",
   appDeepLink: "dentalconnect://",
@@ -186,7 +185,7 @@ export const FAQ = [
   },
   {
     q: "Cum funcționează resetarea parolei?",
-    a: "Primești email de la noreply@dentveerse.com, linkul deschide dentveerse.com/auth/reset-password, setezi parola nouă, apoi revii în app la sign-in (deep link dentalconnect://).",
+    a: "Primești email de la DentVeerse (dentveerse@gmail.com), linkul deschide dentveerse.com/auth/reset-password, setezi parola nouă, apoi revii în app la sign-in (deep link dentalconnect://).",
   },
   {
     q: "Pot schimba tipul de cont (pacient → clinică)?",

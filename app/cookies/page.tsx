@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LegalLayout from "@/components/LegalLayout";
+import { SITE } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Politica de cookie-uri",
@@ -39,8 +40,8 @@ export default function CookiesPage() {
       <h2 className="font-display text-xl text-ink">4. Contact</h2>
       <p>
         Întrebări legate de această politică:{" "}
-        <a href="mailto:contact@dentveerse.com" className="text-primary-light underline underline-offset-4">
-          contact@dentveerse.com
+        <a href={`mailto:${SITE.email}`} className="text-primary-light underline underline-offset-4">
+          {SITE.email}
         </a>
         .
       </p>
