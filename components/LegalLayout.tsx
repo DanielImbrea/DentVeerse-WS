@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 import SiteBackground from "@/components/SiteBackground";
 import { SITE } from "@/lib/constants";
 
@@ -16,8 +17,9 @@ export default function LegalLayout({
       <SiteBackground />
       <header className="border-b border-white/10">
         <div className="container-page flex h-16 items-center justify-between">
-          <Link href="/" className="focus-ring font-display text-lg font-semibold text-ink">
-            {SITE.name}
+          <Link href="/" className="focus-ring flex items-center gap-2.5">
+            <BrandLogo size={32} />
+            <span className="font-display text-lg font-semibold text-ink">{SITE.name}</span>
           </Link>
           <Link href="/" className="focus-ring text-[14px] text-ink-soft hover:text-primary-light">
             Înapoi la site

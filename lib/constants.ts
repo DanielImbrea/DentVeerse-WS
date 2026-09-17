@@ -1,6 +1,7 @@
 export const SITE = {
   /** Brand public site / domeniu */
   name: "DentVeerse",
+  logoSrc: "/logo-transparent-master.png",
   /** Alias brand (același nume peste tot pe site) */
   productName: "DentVeerse",
   tagline: "Rețeaua stomatologică din România",

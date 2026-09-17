@@ -48,7 +48,8 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: SITE.logoSrc,
+    apple: SITE.logoSrc,
   },
   alternates: {
     canonical: SITE.domain,

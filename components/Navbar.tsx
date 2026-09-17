@@ -2,30 +2,17 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import BrandLogo from "@/components/BrandLogo";
 import HashlessScrollLink from "@/components/HashlessScrollLink";
 import { SITE } from "@/lib/constants";
 
 const LINKS = [
-  { href: "#audiente", label: "Pentru cine" },
-  { href: "#aplicatie", label: "App" },
-  { href: "#functii", label: "Funcții" },
-  { href: "#cum-functioneaza", label: "Pași" },
-  { href: "#intrebari", label: "FAQ" },
+  { href: "#audiente", label: "Descoperă" },
+  { href: "#aplicatie", label: "Aplicația" },
+  { href: "#functii", label: "Ce poți face" },
+  { href: "#cum-functioneaza", label: "Cum funcționează" },
+  { href: "#intrebari", label: "Întrebări" },
 ];
-
-function LogoMark() {
-  return (
-    <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-btn">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path
-          d="M12 3c-2 0-3.5 1.2-4 3-.3 1.2-.2 2.5.3 3.6-.8.5-1.3 1.4-1.3 2.4 0 1.7 1.3 3 3 3 .8 0 1.5-.3 2-.8.5.5 1.2.8 2 .8 1.7 0 3-1.3 3-3 0-1-.5-1.9-1.3-2.4.5-1.1.6-2.4.3-3.6-.5-1.8-2-3-4-3z"
-          fill="currentColor"
-          opacity="0.95"
-        />
-      </svg>
-    </span>
-  );
-}
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -53,7 +40,7 @@ export default function Navbar() {
             sectionId="top"
             className="focus-ring group flex items-center gap-3 rounded-xl"
           >
-            <LogoMark />
+            <BrandLogo size={36} priority className="shrink-0" />
             <span className="font-display text-[1.15rem] font-semibold tracking-tight text-ink">
               {SITE.name}
             </span>
