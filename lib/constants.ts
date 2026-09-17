@@ -12,7 +12,8 @@ export const SITE = {
     "Ecosistemul profesional care leagă pacienți, clinici și laboratoare dentare — descoperire, verificare, mesagerie și colaborări B2B, direct din aplicație.",
   appDeepLink: "dentalconnect://",
   iosBundle: "ro.dentalconnect.app",
-  languages: "Română (implicit) · English în app",
+  statsFooterLine1: "O comunitate dentară, într-un singur loc",
+  statsFooterLine2: "Pacienți, clinici, medici și laboratoare — conectați.",
   launchNote:
     "La lansare, platforma este gratuită pentru toți (~6–12 luni). Fără abonamente PRO promovate pe site până la anunț oficial.",
 };
@@ -28,27 +29,37 @@ export const APP_TABS = [
   {
     id: "acasa",
     label: "Acasă",
-    body: "Feed profesional: postări, like-uri, comentarii și salvări de la clinici și laboratoare.",
+    headline: "Un feed pentru comunitatea dentară.",
+    body:
+      "Vezi lucrări, noutăți și postări publicate de clinici și laboratoare. Apreciază, comentează sau salvează conținutul care îți atrage atenția și rămâi conectat la ceea ce se întâmplă în rețea.",
   },
   {
     id: "descopera",
     label: "Descoperă",
-    body: "Căutare globală cu filtre și Dental Map — clinici, medici și laboratoare pe hartă.",
+    headline: "Găsește oamenii și locurile potrivite pentru tine.",
+    body:
+      "Caută clinici, medici și laboratoare după locație, specializare și alte criterii relevante. Explorează profilurile direct de pe hartă, descoperă portofolii și servicii și găsește mai ușor profesioniștii cu care vrei să intri în contact.",
   },
   {
     id: "colaborari",
     label: "Colaborări",
-    body: "Opportunities B2B: cereri structurate între clinici și laboratoare, cu accept multiplu.",
+    headline: "Găsește partenerii potriviți pentru următorul proiect.",
+    body:
+      "Clinicile și laboratoarele pot publica și descoperi oportunități de colaborare, își pot exprima interesul și pot continua discuția direct prin mesagerie. Un spațiu dedicat colaborărilor profesionale, construit pentru relații B2B în stomatologie.",
   },
   {
     id: "mesaje",
     label: "Mesaje",
-    body: "Mesagerie privată text, foto și fișiere — pacient ↔ clinică ↔ laborator.",
+    headline: "Vorbește direct cu oamenii din rețeaua DentVeerse.",
+    body:
+      "Contactează clinici, pacienți și parteneri profesionali într-un singur loc. Trimite mesaje, fotografii și fișiere atunci când ai nevoie să explici mai clar o situație sau să discuți detaliile unei colaborări.",
   },
   {
     id: "notificari",
     label: "Notificări",
-    body: "Alerte in-app (și push la lansare publică) pentru mesaje, recenzii și colaborări.",
+    headline: "Rămâi la curent cu ceea ce contează.",
+    body:
+      "Primește notificări atunci când cineva îți scrie, interacționează cu profilul sau conținutul tău, îți lasă o recenzie sau apare o nouă oportunitate de colaborare.",
   },
 ];
 
@@ -56,43 +67,47 @@ export const AUDIENCES = [
   {
     id: "pacienti",
     label: "Pacienți",
-    kicker: "Cauți un dentist de încredere",
-    headline: "Găsești clinica potrivită, nu prima din listă.",
+    kicker: "Cauți un dentist de încredere?",
+    headline: "Descoperă clinici și medici înainte să faci o alegere.",
     body:
-      "Cauți clinici și medici pe hartă sau prin filtre, vezi portofolii before/after, citești recenzii (1–5 stele) și trimiți mesaje direct din app. Urmărești și salvezi favorite — fără cont de clinică sau laborator.",
+      "Nu te limita la prima clinică pe care o găsești. Descoperă clinici și medici din apropierea ta, caută după specializare, verifică profilurile, portofoliile și recenziile pacienților, apoi păstrează-i pe cei care îți inspiră încredere.",
+    pointsLead: "Tot ce ai nevoie pentru a găsi mai ușor locul potrivit pentru tine.",
     points: [
-      "Dental Map + căutare după oraș, specializare, verificat",
-      "Recenzii de la pacienți reali, vizibile pe profilul clinicii",
-      "Follow & favorite (listele de follow sunt publice)",
-      "Mesaje către clinică, cu poze atașate",
+      "Hartă & căutare — găsește clinici, medici și laboratoare după locație și specializare.",
+      "Profiluri & portofolii — vezi serviciile, echipa și lucrările prezentate de fiecare clinică.",
+      "Recenzii reale — descoperă experiențele pacienților și ratingul clinicilor.",
+      "Follow & favorite — urmărește clinicile care te interesează și salvează-le pentru mai târziu.",
+      "Mesaje directe — contactează o clinică direct din aplicație și trimite inclusiv fotografii atunci când ai nevoie.",
     ],
   },
   {
     id: "clinici",
     label: "Clinici",
     kicker: "Cabinet sau clinică stomatologică",
-    headline: "Profil public, feed și colaborări — într-un singur loc.",
+    headline: "Un profil care arată ce faceți și un loc în care puteți crește.",
     body:
-      "Logo, cover, echipă (medici), servicii, program, portofoliu media și feed profesional. Badge Verificat după documente RO. Open for Collaboration + Opportunities către laboratoare. Mesagerie cu pacienți și parteneri B2B.",
+      "Prezintă-ți clinica, echipa și serviciile într-un profil profesional, arată-ți lucrările printr-un portofoliu și rămâi conectat cu pacienții și profesioniștii din domeniu. De la vizibilitate până la colaborări, totul este într-un singur loc.",
     points: [
-      "Profil complet: locație pe hartă, echipă, catalog servicii",
-      "Portofoliu foto/video (până la ~25 media per item, anti-spam)",
-      "Recenzii primite de la pacienți + status prezență în app",
-      "Opportunities: mai mulți laboratoare pot fi acceptați la o cerere",
+      "Profil profesional — locație pe hartă, echipă, servicii, program și informații despre clinică.",
+      "Portofoliu — prezintă lucrări foto și video și construiește o imagine profesională a clinicii.",
+      "Încredere & vizibilitate — primește recenzii de la pacienți și afișează badge-ul Verificat.",
+      "Colaborări — găsește laboratoare și alte oportunități prin „Open for Collaboration” și Opportunities.",
     ],
   },
   {
     id: "laboratoare",
     label: "Laboratoare",
     kicker: "Laborator dentar",
-    headline: "Portofoliul tău tehnic, vizibil pentru clinicile potrivite.",
+    headline: "Arată ce poate face laboratorul tău. Găsește clinicile potrivite pentru colaborare.",
     body:
-      "Profil cu experiență, mărime echipă și zonă (Local / România / Europa / Internațional). Servicii lab, feed și colaborări în ambe sensuri. Verificare cu documente tehnice — badge Verificat, fără expunere publică a fișierelor.",
+      "Construiește un profil profesional în care să prezinți experiența, echipa, serviciile și lucrările laboratorului. Fă-ți portofoliul vizibil pentru clinici, publică proiecte și noutăți și intră în contact direct cu profesioniștii cu care vrei să lucrezi.",
     points: [
-      "Portofoliu central: zirconiu, CAD/CAM, proteze, categorii media",
-      "Open for Collaboration + Opportunities (max ~5 active/cont)",
-      "Mesagerie B2B directă cu clinicile",
-      "Feed pentru lucrări, anunțuri și parteneriate",
+      "Profil profesional — prezintă experiența laboratorului, echipa, serviciile și zona în care colaborați.",
+      "Portofoliu tehnic — organizează și prezintă lucrările pe categorii, de la zirconiu și CAD/CAM până la proteze și alte servicii.",
+      "Colaborări B2B — activează „Open for Collaboration” și descoperă oportunități de colaborare cu clinici.",
+      "Mesagerie directă — discută cu clinicile într-un spațiu dedicat colaborărilor profesionale.",
+      "Feed profesional — publică lucrări, noutăți și informații despre laborator și rămâi conectat cu comunitatea dentară.",
+      "Profil verificat — după verificarea documentelor necesare, laboratorul poate primi badge-ul Verificat.",
     ],
   },
 ];
@@ -165,22 +180,70 @@ export const HOW_IT_WORKS: Record<
   { step: string; title: string; body: string }[]
 > = {
   pacienti: [
-    { step: "1", title: "Descarcă app-ul", body: "Contul se creează în DentVeerse (iOS / Android)." },
-    { step: "2", title: "Alege Pacient", body: "Tipul de cont se setează la onboarding și nu se schimbă ulterior." },
-    { step: "3", title: "Descoperă", body: "Hartă, filtre, portofolii și recenzii înainte să contactezi." },
-    { step: "4", title: "Conectează-te", body: "Mesaje, follow și favorite — totul în aplicație." },
+    {
+      step: "1",
+      title: "Descarcă DentVeerse",
+      body: "Instalează aplicația și creează-ți contul în câteva momente.",
+    },
+    {
+      step: "2",
+      title: "Creează-ți profilul",
+      body: "Alege contul de pacient și pregătește-te să descoperi rețeaua dentară.",
+    },
+    {
+      step: "3",
+      title: "Găsește ce cauți",
+      body: "Explorează clinici și medici pe hartă, folosește filtrele și descoperă servicii, portofolii și recenzii.",
+    },
+    {
+      step: "4",
+      title: "Conectează-te",
+      body: "Urmărește și salvează clinicile care te interesează sau contactează-le direct prin mesagerie.",
+    },
   ],
   clinici: [
-    { step: "1", title: "Cont Clinică", body: "Onboarding cu tip cont imutabil; completezi profilul public." },
-    { step: "2", title: "Verificare", body: "Trimiți documentele RO; primești badge Verificat după review admin." },
-    { step: "3", title: "Publică & atrage", body: "Feed, portofoliu, servicii — pacienții te găsesc în Descoperă." },
-    { step: "4", title: "Colaborează", body: "Opportunities și mesaje B2B cu laboratoare partenere." },
+    {
+      step: "1",
+      title: "Creează profilul clinicii",
+      body: "Deschide-ți contul și completează profilul cu informațiile, echipa, serviciile și locația clinicii.",
+    },
+    {
+      step: "2",
+      title: "Obține verificarea",
+      body: "Trimite documentele necesare pentru verificare și afișează badge-ul Verificat pe profil după confirmare.",
+    },
+    {
+      step: "3",
+      title: "Prezintă-ți clinica",
+      body: "Publică lucrări și noutăți, construiește-ți portofoliul și fă-ți serviciile vizibile pentru pacienții din rețea.",
+    },
+    {
+      step: "4",
+      title: "Construiește colaborări",
+      body: "Descoperă laboratoare, răspunde oportunităților de colaborare și discută direct cu potențialii parteneri.",
+    },
   ],
   laboratoare: [
-    { step: "1", title: "Cont Laborator", body: "Profil tehnic cu zonă de colaborare și servicii lab." },
-    { step: "2", title: "Portofoliu", body: "Media organizată pe categorii — element central al profilului." },
-    { step: "3", title: "Disponibil", body: "Open for Collaboration + răspuns la Opportunities." },
-    { step: "4", title: "Mesaje B2B", body: "Chat direct cu clinicile după accept sau contact." },
+    {
+      step: "1",
+      title: "Cont Laborator",
+      body: "Profil tehnic cu zonă de colaborare și servicii lab.",
+    },
+    {
+      step: "2",
+      title: "Portofoliu",
+      body: "Media organizată pe categorii — element central al profilului.",
+    },
+    {
+      step: "3",
+      title: "Disponibil",
+      body: "„Open for Collaboration” + răspuns la Opportunities.",
+    },
+    {
+      step: "4",
+      title: "Mesaje B2B",
+      body: "Chat direct cu clinicile după accept sau contact.",
+    },
   ],
 };
 
@@ -227,15 +290,40 @@ export const FAQ = [
   },
 ];
 
-export const NOT_FOR = [
-  "Comenzi lab sau tracking lucrări",
-  "CRM, programări interne sau facturare clinică",
-  "Contabilitate",
-  "Fișe medicale / dosare pacient (EHR)",
-];
+export const TRUST = {
+  title: "Mai multă încredere în fiecare conexiune.",
+  intro:
+    "DentVeerse este construită pentru o comunitate profesională în care oamenii și organizațiile pot fi identificați și verificați. Profilurile eligibile pot primi badge-ul Verificat după verificarea documentelor necesare.",
+  items: [
+    {
+      title: "Verificare reală",
+      body: "Clinicile și laboratoarele trec printr-un proces de verificare înainte de a primi badge-ul Verificat. Documentele necesare sunt analizate de echipa platformei și nu sunt afișate public.",
+    },
+    {
+      title: "Datele tale rămân private",
+      body: "Informațiile și documentele furnizate pentru verificare sunt păstrate private. DentVeerse oferă, de asemenea, instrumente pentru gestionarea, exportul și ștergerea datelor personale.",
+    },
+    {
+      title: "O platformă construită pentru oameni reali",
+      body: "Conținutul și interacțiunile pot fi raportate, iar utilizatorii pot bloca profilurile cu care nu doresc să interacționeze. Scopul este o rețea în care conexiunile profesionale și experiența utilizatorilor rămân în centrul platformei.",
+    },
+  ],
+};
 
 export const FOR = [
-  "Pacienți care caută clinici verificate, cu recenzii și portofoliu real",
-  "Clinici care vor vizibilitate, feed și colaborări cu laboratoare",
-  "Laboratoare care vor discovery B2B, nu doar recomandări informale",
+  {
+    role: "Pacienți",
+    body: "pentru cei care vor să descopere clinici și medici, să consulte portofolii și recenzii și să ia legătura direct cu clinicile.",
+  },
+  {
+    role: "Clinici",
+    body: "pentru cabinete și clinici care vor să-și prezinte echipa, serviciile și lucrările și să construiască relații cu pacienții și laboratoarele.",
+  },
+  {
+    role: "Laboratoare",
+    body: "pentru laboratoare care vor să-și prezinte portofoliul și să descopere noi oportunități de colaborare cu clinicile.",
+  },
 ];
+
+export const NOT_FOR_SUMMARY =
+  "DentVeerse nu este un sistem de CRM, facturare sau contabilitate și nu înlocuiește software-ul intern al unei clinici. Platforma nu este destinată gestionării dosarelor medicale sau stocării fișelor pacienților.";

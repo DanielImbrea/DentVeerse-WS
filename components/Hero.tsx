@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { heroItem, revealContainer } from "@/lib/animations";
 import PhoneMockup from "./PhoneMockup";
 import StoreButtons from "./StoreButtons";
+import HashlessScrollLink from "@/components/HashlessScrollLink";
 import { SITE } from "@/lib/constants";
 
 export default function Hero() {
@@ -49,12 +50,12 @@ export default function Hero() {
             <StoreButtons />
             <p className="mt-5 text-[14px] text-ink-muted">
               Conturile se creează în app ·{" "}
-              <a
-                href="#waitlist"
+              <HashlessScrollLink
+                sectionId="waitlist"
                 className="focus-ring font-semibold text-primary-light underline decoration-primary-light/30 underline-offset-4"
               >
                 Lista de așteptare
-              </a>
+              </HashlessScrollLink>
             </p>
           </motion.div>
 

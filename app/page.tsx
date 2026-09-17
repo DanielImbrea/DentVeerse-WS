@@ -12,6 +12,7 @@ import Waitlist from "@/components/Waitlist";
 import Footer from "@/components/Footer";
 import SiteBackground from "@/components/SiteBackground";
 import CookieBanner from "@/components/CookieBanner";
+import HashlessScrollOnLoad from "@/components/HashlessScrollOnLoad";
 import { SITE } from "@/lib/constants";
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
 
   return (
     <>
+      <HashlessScrollOnLoad />
       <SiteBackground />
       {/* eslint-disable-next-line react/no-danger */}
       <script

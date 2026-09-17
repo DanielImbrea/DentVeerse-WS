@@ -5,11 +5,45 @@ import { revealContainer, revealUp } from "@/lib/animations";
 import { SITE } from "@/lib/constants";
 
 const STATS = [
-  { value: "3", label: "tipuri de cont imutabile la onboarding" },
-  { value: "5", label: "tab-uri în app: Acasă → Notificări" },
-  { value: "0", label: "date medicale / EHR pe platformă" },
-  { value: "6–12", label: "luni gratuite estimate la lansare" },
-];
+  {
+    value: "3",
+    title: "tipuri de cont",
+    subtitle: "Pacient · Clinică · Laborator",
+  },
+  {
+    value: "1",
+    title: "ecosistem dentar",
+    subtitle: "Conectat într-un singur spațiu digital",
+  },
+  {
+    value: null,
+    title: "posibilități de conectare",
+    subtitle: "Descoperă, urmărește, comunică și colaborează",
+  },
+  {
+    value: "0",
+    title: "dosare medicale",
+    subtitle: "Platformă construită pentru networking, nu pentru EHR",
+  },
+] as const;
+
+function ConnectIcon() {
+  return (
+    <svg
+      className="h-9 w-9 text-primary-light md:h-10 md:w-10"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      aria-hidden
+    >
+      <circle cx="6" cy="12" r="2.5" />
+      <circle cx="18" cy="6" r="2.5" />
+      <circle cx="18" cy="18" r="2.5" />
+      <path strokeLinecap="round" d="M8.2 11.2 15.5 7.2M8.2 12.8l7.3 4" />
+    </svg>
+  );
+}
 
 export default function StatsBar() {
   return (
@@ -20,22 +54,34 @@ export default function StatsBar() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-40px" }}
-          className="glass-panel grid grid-cols-2 gap-px overflow-hidden p-px md:grid-cols-4"
+          className="glass-panel overflow-hidden rounded-2xl border border-white/12"
         >
-          {STATS.map((s) => (
-            <motion.div
-              key={s.label}
-              variants={revealUp}
-              className="bg-bg/40 px-6 py-8 backdrop-blur-sm md:px-8"
-            >
-              <div className="font-display bg-gradient-to-br from-primary-light to-accent bg-clip-text text-4xl font-bold tracking-tight text-transparent md:text-[2.75rem]">
-                {s.value}
-              </div>
-              <div className="mt-2 text-[14px] leading-snug text-ink-soft">{s.label}</div>
-            </motion.div>
-          ))}
+          <div className="grid grid-cols-1 divide-y divide-white/10 sm:grid-cols-2 sm:divide-x sm:divide-y-0 md:grid-cols-4 md:divide-x md:divide-y-0">
+            {STATS.map((s) => (
+              <motion.div
+                key={s.title}
+                variants={revealUp}
+                className="group px-6 py-8 transition-colors hover:bg-white/[0.03] md:px-7 md:py-9"
+              >
+                <div className="flex h-[2.75rem] items-end md:h-[3rem]">
+                  {s.value !== null ? (
+                    <div className="font-display bg-gradient-to-br from-primary-light to-accent-light bg-clip-text text-4xl font-bold leading-none tracking-tight text-transparent md:text-[2.65rem]">
+                      {s.value}
+                    </div>
+                  ) : (
+                    <ConnectIcon />
+                  )}
+                </div>
+                <p className="mt-3 text-[15px] font-semibold leading-snug text-ink">{s.title}</p>
+                <p className="mt-1.5 text-[13px] leading-relaxed text-ink-soft">{s.subtitle}</p>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
-        <p className="mt-3 text-center text-[12px] text-ink-muted">{SITE.languages}</p>
+        <div className="mt-5 space-y-1 text-center">
+          <p className="text-[13px] font-medium text-ink-soft">{SITE.statsFooterLine1}</p>
+          <p className="text-[12px] text-ink-muted">{SITE.statsFooterLine2}</p>
+        </div>
       </div>
     </section>
   );

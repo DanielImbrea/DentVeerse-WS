@@ -58,7 +58,13 @@ export default function AudienceTabs() {
                 {current.body}
               </p>
             </div>
-            <ul className="mt-10 grid content-start gap-3 sm:grid-cols-2 lg:mt-0">
+            <div className="mt-10 lg:mt-0">
+              {"pointsLead" in current && current.pointsLead && (
+                <p className="mb-4 text-[15px] font-medium leading-snug text-ink md:text-[16px]">
+                  {current.pointsLead}
+                </p>
+              )}
+            <ul className="grid content-start gap-3 sm:grid-cols-2">
               {current.points.map((p, i) => (
                 <motion.li
                   key={p}
@@ -74,6 +80,7 @@ export default function AudienceTabs() {
                 </motion.li>
               ))}
             </ul>
+            </div>
           </motion.div>
         </AnimatePresence>
       </div>

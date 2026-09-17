@@ -14,10 +14,19 @@ export default function HowItWorks() {
       <div className="container-page">
         <div className="mb-12 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeader
-            className="mb-0"
+            className="mb-0 max-w-[58ch]"
             kicker="Proces"
-            title="Cum funcționează"
-            description="Pașii diferă în funcție de tipul de cont — alege perspectiva ta."
+            title="Cum funcționează DentVeerse"
+            description={
+              <>
+                <p>Un punct de plecare. Experiențe diferite.</p>
+                <p className="mt-4">
+                  Fie că ești pacient, clinică sau laborator, DentVeerse îți oferă instrumentele
+                  potrivite pentru a descoperi, comunica și construi conexiuni în lumea
+                  stomatologiei.
+                </p>
+              </>
+            }
           />
           <div className="flex flex-wrap gap-2 lg:shrink-0">
             {AUDIENCES.map((a) => (

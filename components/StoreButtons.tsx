@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import HashlessScrollLink from "@/components/HashlessScrollLink";
 
 function Tooltip({ show }: { show: boolean }) {
   return (
@@ -22,8 +23,8 @@ function StoreButton({ kind }: { kind: "ios" | "android" }) {
   return (
     <div className="relative">
       <Tooltip show={hover} />
-      <a
-        href="#waitlist"
+      <HashlessScrollLink
+        sectionId="waitlist"
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
         onFocus={() => setHover(true)}
@@ -53,7 +54,7 @@ function StoreButton({ kind }: { kind: "ios" | "android" }) {
             {isIos ? "App Store" : "Google Play"}
           </span>
         </span>
-      </a>
+      </HashlessScrollLink>
     </div>
   );
 }

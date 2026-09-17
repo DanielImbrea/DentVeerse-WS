@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import HashlessScrollLink from "@/components/HashlessScrollLink";
 import { SITE } from "@/lib/constants";
 
 const LINKS = [
@@ -48,30 +49,33 @@ export default function Navbar() {
         }`}
       >
         <nav className="flex h-14 items-center justify-between px-3 md:h-[3.75rem] md:px-4">
-          <a href="#top" className="focus-ring group flex items-center gap-3 rounded-xl">
+          <HashlessScrollLink
+            sectionId="top"
+            className="focus-ring group flex items-center gap-3 rounded-xl"
+          >
             <LogoMark />
             <span className="font-display text-[1.15rem] font-semibold tracking-tight text-ink">
               {SITE.name}
             </span>
-          </a>
+          </HashlessScrollLink>
 
           <ul className="hidden items-center gap-1 md:flex">
             {LINKS.map((l) => (
               <li key={l.href}>
-                <a
-                  href={l.href}
+                <HashlessScrollLink
+                  sectionId={l.href.replace(/^#/, "")}
                   className="focus-ring rounded-full px-4 py-2 text-[14px] font-medium text-ink-soft transition-colors hover:bg-white/10 hover:text-ink"
                 >
                   {l.label}
-                </a>
+                </HashlessScrollLink>
               </li>
             ))}
           </ul>
 
           <div className="hidden items-center gap-3 md:flex">
-            <a href="#waitlist" className="btn-primary focus-ring">
+            <HashlessScrollLink sectionId="waitlist" className="btn-primary focus-ring">
               Fii primul anunțat
-            </a>
+            </HashlessScrollLink>
           </div>
 
           <button
@@ -103,23 +107,23 @@ export default function Navbar() {
             <ul className="flex flex-col gap-1">
               {LINKS.map((l) => (
                 <li key={l.href}>
-                  <a
-                    href={l.href}
-                    onClick={() => setOpen(false)}
+                  <HashlessScrollLink
+                    sectionId={l.href.replace(/^#/, "")}
+                    onNavigate={() => setOpen(false)}
                     className="focus-ring block rounded-xl px-3 py-2.5 text-[15px] font-medium text-ink"
                   >
                     {l.label}
-                  </a>
+                  </HashlessScrollLink>
                 </li>
               ))}
               <li className="pt-2">
-                <a
-                  href="#waitlist"
-                  onClick={() => setOpen(false)}
+                <HashlessScrollLink
+                  sectionId="waitlist"
+                  onNavigate={() => setOpen(false)}
                   className="btn-primary focus-ring w-full"
                 >
                   Fii primul anunțat
-                </a>
+                </HashlessScrollLink>
               </li>
             </ul>
           </div>

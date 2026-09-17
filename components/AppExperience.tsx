@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { APP_TABS, SITE } from "@/lib/constants";
+import { AppTabIllustration } from "./app-tab-illustrations";
 import SectionHeader from "./SectionHeader";
 
 export default function AppExperience() {
@@ -14,8 +15,18 @@ export default function AppExperience() {
       <div className="container-page">
         <SectionHeader
           kicker="În aplicație"
-          title={`${SITE.name} — cinci tab-uri, un singur ecosistem.`}
-          description="Conturile se creează în app (iOS & Android). Site-ul le explică; experiența completă trăiește pe telefon."
+          title="Tot ce se întâmplă în rețeaua dentară, într-un singur loc."
+          description={
+            <>
+              <p>
+                Descoperă oameni, lucrări și oportunități. Conectează-te cu comunitatea dentară.
+              </p>
+              <p className="mt-4">
+                {SITE.name} reunește într-o singură aplicație pacienți, clinici, medici și
+                laboratoare — fiecare cu propriul său rol, dar conectați în aceeași rețea.
+              </p>
+            </>
+          }
         />
 
         <div className="glass-panel overflow-hidden p-2 md:p-3">
@@ -52,29 +63,31 @@ export default function AppExperience() {
             >
               <div>
                 <p className="text-kicker text-primary-light">{tab.label}</p>
+                {"headline" in tab && tab.headline && (
+                  <p className="mt-2 text-[18px] font-semibold leading-snug text-ink md:text-[19px]">
+                    {tab.headline}
+                  </p>
+                )}
                 <p className="mt-3 text-[17px] leading-relaxed text-ink-soft">{tab.body}</p>
                 <p className="mt-6 text-[13px] text-ink-muted">
                   Disponibil în aplicația <span className="text-ink-soft">{SITE.name}</span> pentru
                   iOS și Android.
                 </p>
               </div>
-              <div className="relative flex min-h-[200px] items-center justify-center rounded-2xl border border-white/10 bg-black/20 p-6">
-                <div className="absolute inset-x-8 top-6 flex justify-between text-[10px] font-medium uppercase tracking-widest text-ink-muted">
-                  <span>9:41</span>
-                  <span>{SITE.name}</span>
-                </div>
-                <div className="mt-8 w-full max-w-[280px] space-y-3">
-                  <div className="h-3 w-3/4 rounded-full bg-white/15" />
-                  <div className="h-3 w-full rounded-full bg-white/10" />
-                  <div className="h-24 rounded-xl border border-white/10 bg-gradient-to-br from-primary/20 to-transparent" />
-                  <div className="flex gap-2">
-                    <div className="h-8 flex-1 rounded-lg bg-white/10" />
-                    <div className="h-8 flex-1 rounded-lg bg-primary/30" />
-                  </div>
-                </div>
-                <p className="absolute bottom-4 text-[12px] text-ink-muted">
-                  Screenshot-uri store — în curând
-                </p>
+              <div className="flex min-h-[240px] items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-black/25 via-primary/5 to-black/30 p-5 md:min-h-[280px] md:p-6">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={tab.id}
+                    initial={{ opacity: 0, scale: 0.98 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.98 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-full"
+                    aria-hidden
+                  >
+                    <AppTabIllustration tabId={tab.id} />
+                  </motion.div>
+                </AnimatePresence>
               </div>
             </motion.div>
           </AnimatePresence>

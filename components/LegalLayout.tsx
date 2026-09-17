@@ -19,7 +19,7 @@ export default function LegalLayout({
           <Link href="/" className="focus-ring font-display text-lg font-semibold text-ink">
             {SITE.name}
           </Link>
-          <Link href="/#top" className="focus-ring text-[14px] text-ink-soft hover:text-primary-light">
+          <Link href="/" className="focus-ring text-[14px] text-ink-soft hover:text-primary-light">
             Înapoi la site
           </Link>
         </div>
