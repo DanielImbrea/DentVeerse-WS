@@ -5,7 +5,7 @@ export const SITE = {
   productName: "DentVeerse",
   tagline: "Rețeaua stomatologică din România",
   positioning:
-    "LinkedIn + Instagram + Maps pentru stomatologie: discovery, portofoliu, feed, networking și colaborări B2B — nu CRM, facturare sau dosare medicale.",
+    "Descoperire, portofoliu, feed și colaborări B2B pentru stomatologie — nu CRM, facturare sau dosare medicale.",
   domain: "https://www.dentveerse.com",
   email: "dentveerse@gmail.com",
   descriptionShort:

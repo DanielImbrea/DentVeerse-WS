@@ -3,11 +3,6 @@
 import Link from "next/link";
 import { SITE } from "@/lib/constants";
 
-const SOCIALS = [
-  { label: "Instagram", href: "#" },
-  { label: "LinkedIn", href: "#" },
-];
-
 export default function Footer() {
   return (
     <footer className="relative border-t border-white/10 py-16">
@@ -50,13 +45,6 @@ export default function Footer() {
                   {SITE.email}
                 </a>
               </li>
-              {SOCIALS.map((s) => (
-                <li key={s.label}>
-                  <a href={s.href} className="focus-ring hover:text-primary-light">
-                    {s.label}
-                  </a>
-                </li>
-              ))}
             </ul>
           </div>
         </div>
