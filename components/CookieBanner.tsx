@@ -34,7 +34,7 @@ export default function CookieBanner() {
       aria-labelledby="cookie-title"
       className="fixed bottom-4 left-4 right-4 z-[100] mx-auto max-w-xl md:left-auto md:right-6"
     >
-      <div className="glass-panel border-white/15 p-5 shadow-glass-lg">
+      <div className="glass-panel border-white/15 p-3 shadow-glass-lg sm:p-5">
         <p id="cookie-title" className="text-[15px] font-semibold text-ink">
           Cookie-uri pe dentveerse.com
         </p>
@@ -46,11 +46,19 @@ export default function CookieBanner() {
           </Link>
           .
         </p>
-        <div className="mt-4 flex flex-wrap gap-2">
-          <button type="button" onClick={() => accept("essential")} className="focus-ring rounded-full border border-white/15 px-4 py-2 text-[13px] font-semibold text-ink-soft">
+        <div className="mt-2.5 flex flex-row flex-nowrap gap-2 sm:mt-4">
+          <button
+            type="button"
+            onClick={() => accept("essential")}
+            className="focus-ring min-w-0 flex-1 rounded-full border border-white/15 px-2 py-1.5 text-[11px] font-semibold text-ink-soft sm:flex-none sm:px-4 sm:py-2 sm:text-[13px]"
+          >
             Doar esențiale
           </button>
-          <button type="button" onClick={() => accept("all")} className="btn-primary focus-ring text-[13px]">
+          <button
+            type="button"
+            onClick={() => accept("all")}
+            className="btn-primary focus-ring min-w-0 flex-1 px-2 py-1.5 text-[11px] sm:flex-none sm:px-4 sm:py-2 sm:text-[13px]"
+          >
             Accept toate
           </button>
         </div>

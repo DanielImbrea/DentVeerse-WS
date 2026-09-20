@@ -10,10 +10,7 @@ export default function Footer() {
       <div className="container-page">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <div className="flex items-center gap-3">
-              <BrandLogo size={44} />
-              <span className="font-display text-2xl font-semibold tracking-tight text-ink">{SITE.name}</span>
-            </div>
+            <BrandLogo variant="full" priority={false} />
             <p className="mt-1 text-[14px] font-medium text-primary-light">{SITE.tagline}</p>
             <p className="mt-4 max-w-[36ch] text-[15px] leading-relaxed text-ink-soft">
               {SITE.tagline}. {SITE.positioning}

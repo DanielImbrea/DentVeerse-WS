@@ -1,7 +1,25 @@
+const BRAND_ASSETS = "/newLogo/dentveerse-brand";
+
+export const BRAND = {
+  mark: "/newLogo/dentveerse-mark.svg",
+  logo: "/newLogo/dentveerse-logo.svg",
+  faviconSvg: `${BRAND_ASSETS}/favicon.svg`,
+  faviconIco: `${BRAND_ASSETS}/favicon.ico`,
+  favicon16: `${BRAND_ASSETS}/favicons/favicon-16x16.png`,
+  favicon32: `${BRAND_ASSETS}/favicons/favicon-32x32.png`,
+  appleTouch: `${BRAND_ASSETS}/favicons/apple-touch-icon.png`,
+  ogImage: `${BRAND_ASSETS}/png/og-image-1200x630.png`,
+  webManifest: "/site.webmanifest",
+} as const;
+
 export const SITE = {
   /** Brand public site / domeniu */
   name: "DentVeerse",
-  logoSrc: "/logo-transparent-master.png",
+  /** Simbol (navbar, favicon fallback) */
+  logoSrc: BRAND.mark,
+  /** Wordmark complet (footer etc.) */
+  logoFullSrc: BRAND.logo,
+  ogImageSrc: BRAND.ogImage,
   /** Alias brand (același nume peste tot pe site) */
   productName: "DentVeerse",
   tagline: "Rețeaua stomatologică din România",

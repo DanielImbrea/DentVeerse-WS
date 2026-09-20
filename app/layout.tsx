@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
 import "./globals.css";
-import { SITE } from "@/lib/constants";
+import { BRAND, SITE } from "@/lib/constants";
 
 const display = Bricolage_Grotesque({
   subsets: ["latin", "latin-ext"],
@@ -39,17 +39,23 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     locale: "ro_RO",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: SITE.name }],
+    images: [{ url: SITE.ogImageSrc, width: 1200, height: 630, alt: SITE.name }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE.name} — ${SITE.tagline}`,
     description: SITE.descriptionShort,
-    images: ["/og-image.png"],
+    images: [SITE.ogImageSrc],
   },
+  manifest: BRAND.webManifest,
   icons: {
-    icon: SITE.logoSrc,
-    apple: SITE.logoSrc,
+    icon: [
+      { url: BRAND.faviconSvg, type: "image/svg+xml" },
+      { url: BRAND.favicon32, sizes: "32x32", type: "image/png" },
+      { url: BRAND.favicon16, sizes: "16x16", type: "image/png" },
+      { url: BRAND.faviconIco, sizes: "any" },
+    ],
+    apple: [{ url: BRAND.appleTouch, sizes: "180x180", type: "image/png" }],
   },
   alternates: {
     canonical: SITE.domain,
